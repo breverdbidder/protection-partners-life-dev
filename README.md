@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Life Insurance Agency Site Template
 
-## Getting Started
+A production-ready Next.js template for a life insurance agency, modeled on
+conversion- and content-heavy sites like Choice Mutual. Ships with a placeholder
+brand ("Evergreen Life") that you can swap out by editing a single file.
 
-First, run the development server:
+**Stack:** Next.js 15 (App Router) · TypeScript · Tailwind CSS v4 · shadcn/ui · zod + react-hook-form
+
+## What's included
+
+- **Homepage** — hero with trust badges, sample-rates table, carrier strip,
+  feature pillars, product cards, how-it-works, testimonials, comparison table,
+  plain-English explainers, buyer's checklist, guides preview, FAQ, and CTA band
+- **Multi-step quote funnel** (`/quote`) — product → coverage/state →
+  age/gender/tobacco → contact + TCPA-style consent, validated with zod +
+  react-hook-form, with `?product=` pre-selection
+- **Lead capture API** (`/api/quote`) — validates the payload and forwards it to
+  a webhook/CRM via `LEAD_WEBHOOK_URL`, or logs to the console in development
+- **Guides section** (`/guides`) — three full-length articles plus a glossary,
+  stored as typed content objects (easy to migrate to MDX or a CMS later)
+- **SEO layer** — config-driven JSON-LD (`pageSchema()`, one `@graph` per page),
+  crawlable `<details>` FAQ sections whose FAQPage schema derives from the same
+  array the UI renders, sitemap, robots, per-page metadata
+- **Build guards** — `check:titles` (titles ≤ 70 chars) and `check:ratio`
+  (text-to-HTML ratio ≥ 11% on every prerendered page) run against build output
+
+## Quick start
 
 ```bash
+npm install
+cp .env.example .env.local   # optional — set LEAD_WEBHOOK_URL when you have a CRM
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Make it yours
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Brand** — edit `src/lib/site-config.ts`: name, phone, email, hours, NPN,
+   address, products, carriers. Colors live as CSS tokens at the bottom of
+   `src/app/globals.css`.
+2. **Leads** — set `LEAD_WEBHOOK_URL` to your CRM or webhook endpoint; the quote
+   form posts JSON there via `src/app/api/quote/route.ts`.
+3. **Content** — guides live in `src/content/guides.ts`; homepage sections in
+   `src/app/page.tsx`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ⚠️ Before you launch
 
-## Learn More
+The review scores, testimonials, carrier names, and sample rates in this
+template are **illustrative placeholders**. Replace them with real, verifiable
+data — and never publish ratings you can't substantiate. For the same reason,
+the template deliberately emits **no** `aggregateRating` in its structured data;
+add one only when you have real review data behind it.
 
-To learn more about Next.js, take a look at the following resources:
+## Verification
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint && npm run typecheck && npm run build && npm run check:titles && npm run check:ratio
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — see [LICENSE](LICENSE).
