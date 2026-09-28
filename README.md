@@ -28,17 +28,25 @@ brand ("Evergreen Life") that you can swap out by editing a single file.
 
 ```bash
 npm install
-cp .env.example .env.local   # optional — set LEAD_WEBHOOK_URL when you have a CRM
 npm run dev
 ```
 
 ## Make it yours
 
+The fastest path is the guided onboarding prompt: run `/onboard` in
+[Claude Code](https://claude.com/claude-code), or paste [ONBOARDING.md](ONBOARDING.md)
+into any AI coding assistant. It interviews you for your agency's details,
+rewrites the brand config, creates your `.env.local`, and runs the build checks.
+
+To do it by hand instead:
+
 1. **Brand** — edit `src/lib/site-config.ts`: name, phone, email, hours, NPN,
    address, products, carriers. Colors live as CSS tokens at the bottom of
    `src/app/globals.css`.
-2. **Leads** — set `LEAD_WEBHOOK_URL` to your CRM or webhook endpoint; the quote
-   form posts JSON there via `src/app/api/quote/route.ts`.
+2. **Environment** — create `.env.local` with `NEXT_PUBLIC_SITE_URL` (your
+   production domain) and `LEAD_WEBHOOK_URL` (your CRM or webhook endpoint; the
+   quote form posts JSON there via `src/app/api/quote/route.ts`, or logs to the
+   console in development when unset).
 3. **Content** — guides live in `src/content/guides.ts`; homepage sections in
    `src/app/page.tsx`.
 
