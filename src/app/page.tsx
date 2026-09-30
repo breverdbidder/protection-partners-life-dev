@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import TrustBadges from "@/components/site/trust-badges";
-import { siteConfig, CANOPY_URL } from "@/lib/site-config";
+import { siteConfig, CANOPY_URL, ASSET_PREFIX } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} | Home, Auto and Business Coverage Review`,
@@ -30,7 +30,7 @@ export default function HomePage() {
       <section className="border-b bg-gradient-to-b from-secondary/60 to-background">
         <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <img src="/logo.png" alt={siteConfig.name} className="mx-auto mb-6 h-24 w-auto" />
+            <img src={`${ASSET_PREFIX}/logo.png`} alt={siteConfig.name} className="mx-auto mb-6 h-24 w-auto" />
             <Badge variant="secondary" className="mb-4">Home · Auto · Business</Badge>
             <h1 className="text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
               Smarter protection for your home, car and business
