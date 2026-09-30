@@ -130,20 +130,16 @@
     @apply font-sans;
   }
 }
-/* Evergreen Life brand overrides — teal/navy trust palette (placeholder brand).
-   Swap these values to rebrand; component code references only the tokens. */
+/* Protection Insurance Partners palette: navy #1e4375, teal #82c7c6, light teal #cbebe9, blue-grey #6689a8 */
 :root {
-  --primary: oklch(0.55 0.1 205);
-  --primary-foreground: oklch(0.985 0 0);
-  --ring: oklch(0.55 0.1 205);
-  --navy: oklch(0.3 0.055 245);
-  --primary-bright: oklch(0.78 0.1 195);
-}
-
-.dark {
-  --primary: oklch(0.7 0.1 200);
-  --primary-foreground: oklch(0.17 0.03 245);
-  --ring: oklch(0.7 0.1 200);
-  --navy: oklch(0.88 0.02 240);
-  --primary-bright: oklch(0.78 0.1 195);
+  --primary: #1e4375;
+  --primary-foreground: #ffffff;
+  --ring: #6689a8;
+  --navy: #1e4375;
+  --primary-bright: #82c7c6;
+  --secondary: #cbebe9;
+  --secondary-foreground: #1e4375;
+  --muted: #eef7f7;
+  --accent: #cbebe9;
+  --accent-foreground: #1e4375;
 }
