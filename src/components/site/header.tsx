@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, Phone, ShieldCheck, X } from "lucide-react";
+import { Menu, ShieldCheck, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
@@ -37,23 +37,9 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={`tel:${siteConfig.phone.tel}`}
-            className="hidden items-center gap-2 text-sm font-semibold text-navy lg:flex"
-          >
-            <Phone className="size-4 text-primary" aria-hidden />
-            {siteConfig.phone.display}
-          </a>
           <Button asChild size="sm" className="hidden font-semibold sm:inline-flex">
-            <Link href="/quote">See Instant Quotes</Link>
+            <Link href="/quote">Start the walkthrough</Link>
           </Button>
-          <a
-            href={`tel:${siteConfig.phone.tel}`}
-            className="inline-flex size-9 items-center justify-center rounded-md border text-primary sm:hidden"
-            aria-label={`Call ${siteConfig.phone.display}`}
-          >
-            <Phone className="size-4" aria-hidden />
-          </a>
           <button
             type="button"
             className="inline-flex size-9 items-center justify-center rounded-md border md:hidden"
@@ -90,7 +76,7 @@ export default function Header() {
                 className="block rounded-md bg-primary px-2 py-2 text-sm font-semibold text-primary-foreground"
                 onClick={() => setOpen(false)}
               >
-                See Instant Quotes
+                Start the walkthrough
               </Link>
             </li>
           </ul>
