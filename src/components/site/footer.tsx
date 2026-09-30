@@ -29,9 +29,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-slate-400">
-        Layout based on melisamikko/life-insurance-agency-template (MIT).
-      </div>
     </footer>
   );
 }
