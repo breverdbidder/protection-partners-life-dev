@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { siteConfig, CANOPY_URL } from "@/lib/site-config";
+import { siteConfig, CANOPY_URL, ASSET_PREFIX } from "@/lib/site-config";
 
 export default function Footer() {
   return (
     <footer className="border-t bg-navy text-slate-200">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-3">
         <div>
-          <img src="/logo.png" alt={siteConfig.name} className="h-14 w-auto rounded bg-white p-1" />
+          <img src={`${ASSET_PREFIX}/logo.png`} alt={siteConfig.name} className="h-14 w-auto rounded bg-white p-1" />
           <p className="mt-3 text-sm text-slate-300">{siteConfig.tagline}</p>
         </div>
         <nav aria-label="Coverage">
