@@ -14,6 +14,8 @@ export const siteConfig = {
   tagline: "Smarter protection for your home, car and business",
   description:
     "Protection Insurance Partners helps families and business owners review their home, auto and business coverage. Development preview.",
+  phone: { display: "(888) 801-8814", tel: "+18888018814" },
+  text: { display: "(772) 297-2272", sms: "+17722972272" },
   products: [
     {
       slug: "home",
