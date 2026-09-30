@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ClipboardCheck, Coffee, Lock, SearchCheck, ExternalLink, Gift } from "lucide-react";
+import { ArrowRight, ClipboardCheck, Lock, SearchCheck, ExternalLink, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -119,15 +119,22 @@ export default function HomePage() {
           </Card>
           <Card className="border-2 border-primary-bright">
             <CardContent className="flex flex-col gap-3 pt-6 text-center">
-              <Coffee className="mx-auto size-10 text-primary" aria-hidden />
-              <h2 className="text-xl font-bold text-navy">A coffee or food e-card while we work on your quote</h2>
+              <div role="img" aria-label="Illustration of a $10 Protection Partners e-gift card" className="mx-auto flex aspect-[1.6] w-full max-w-[300px] flex-col justify-between rounded-2xl bg-gradient-to-br from-navy via-[#6689a8] to-primary-bright p-4 text-left text-white shadow-lg">
+                <div className="flex items-center justify-between text-xs font-bold">
+                  <span>Protection Partners</span>
+                  <span className="rounded-full bg-[#cbebe9] px-2 py-0.5 text-[10px] tracking-wider text-navy">E-GIFT CARD</span>
+                </div>
+                <div className="text-5xl font-extrabold leading-none">$10</div>
+                <div className="flex justify-between text-[11px]"><span>Coffee or food</span><span>Sent to your phone</span></div>
+              </div>
+              <h2 className="text-xl font-bold text-navy">A $10 coffee or food e-gift card, on us</h2>
               <p className="text-sm text-muted-foreground">
-                The idea: take a coffee or food break while we review your coverage, with the aim of
-                having your quote back before the break ends.
+                Part of our $1,000,000 savings campaign: while we review your coverage, Protection Partners plans
+                to text a $10 e-gift card to your phone for a coffee or a bite. Planned eligibility: your policies are verified through Canopy Connect first. Our aim is to have your quote back before your break ends.
               </p>
               <p className="rounded-md bg-background p-3 text-xs text-muted-foreground">
-                Concept preview only. The e-card is a demo: no provider, amount, eligibility or funding is set,
-                nothing is issued, and there is no guaranteed turnaround time.
+                Concept preview only. The $10 amount is a planned idea. The gift card provider, final eligibility rules, who approves issuance, funding and
+                legal approval are not set, so nothing is issued or sent and there is no guaranteed turnaround time.
               </p>
             </CardContent>
           </Card>
