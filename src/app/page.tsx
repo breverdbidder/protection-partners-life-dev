@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 
 const pillars = [
   { icon: SearchCheck, title: "A clear review", body: "See what your current home, auto or business policy covers, and where it may fall short." },
-  { icon: Lock, title: "Connect securely", body: "Share your policy details through Canopy Connect instead of digging up paperwork." },
+  { icon: Lock, title: "Connect with Canopy", body: "Share your policy details through Canopy Connect instead of digging up paperwork." },
   { icon: ClipboardCheck, title: "Plain-English next steps", body: "Get a simple summary of what to look at before your next renewal." },
 ];
 
 const steps = [
   { step: "1", title: "Pick what to review", body: "Choose home, auto or business coverage." },
-  { step: "2", title: "Connect your policies", body: "Use the secure Canopy link to share your current policy information." },
+  { step: "2", title: "Connect your policies", body: "Use the Canopy link to share your current policy information." },
   { step: "3", title: "See your options", body: "Review what was found and decide what to do next. You stay in control." },
 ];
 
