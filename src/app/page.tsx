@@ -32,12 +32,14 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl text-center">
             <img src={`${ASSET_PREFIX}/logo.png`} alt={siteConfig.name} className="mx-auto mb-6 h-24 w-auto" />
             <Badge variant="secondary" className="mb-4">Home · Auto · Business</Badge>
-            <div className="mx-auto mb-4 flex w-fit max-w-full flex-col items-center gap-3 rounded-[22px] bg-navy px-5 pb-4 pt-3 text-center text-sm font-bold text-white sm:text-base">
-              <p>Our goal: $1,000,000 in combined premium savings</p>
-              <div role="img" aria-label="Illustration of a $10 Protection Partners e-gift card" className="flex aspect-[1.6] w-full max-w-[210px] flex-col justify-between rounded-xl border border-white/35 bg-gradient-to-br from-navy via-[#6689a8] to-primary-bright px-3 py-2 text-left font-normal text-white shadow-lg">
-                <div className="flex items-center justify-between gap-2 text-[10px] font-bold"><span className="whitespace-nowrap">Protection Partners</span><span className="whitespace-nowrap rounded-full bg-[#cbebe9] px-1.5 text-[8px] tracking-wider text-navy">E-GIFT CARD</span></div>
-                <div className="text-3xl font-extrabold leading-none">$10</div>
-                <div className="flex justify-between text-[9px]"><span>Coffee or food</span><span>Sent to your phone</span></div>
+            <div className="mx-auto mb-4 flex w-fit max-w-full flex-col items-center gap-1 rounded-[26px] bg-gradient-to-br from-navy to-[#163557] px-7 pb-5 pt-4 shadow-xl text-center text-sm font-bold text-white sm:text-base">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#cbebe9]">Our goal</p>
+              <p className="text-5xl font-extrabold leading-none tracking-tight sm:text-7xl">$1,000,000</p>
+              <p className="text-base font-bold sm:text-xl">in combined premium savings</p>
+              <div role="img" aria-label="Illustration of a $10 Protection Partners e-gift card" className="flex aspect-[1.6] w-full mt-2 max-w-[140px] flex-col justify-between rounded-lg border border-white/35 bg-gradient-to-br from-navy via-[#6689a8] to-primary-bright px-2 py-1.5 text-left font-normal text-white shadow-lg">
+                <div className="flex items-center justify-between gap-1 text-[7px] font-bold"><span className="whitespace-nowrap">Protection Partners</span><span className="whitespace-nowrap rounded-full bg-[#cbebe9] px-1 text-[5.5px] tracking-wider text-navy">E-GIFT CARD</span></div>
+                <div className="text-xl font-extrabold leading-none">$10</div>
+                <div className="flex justify-between text-[6px]"><span>Coffee or food</span><span>Sent to your phone</span></div>
               </div>
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
