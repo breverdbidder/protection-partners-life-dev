@@ -60,7 +60,7 @@ export default function QuoteForm() {
           <CheckCircle2 className="size-14 text-primary" aria-hidden />
           <h2 className="text-2xl font-bold text-navy">Demo completed. Nothing was sent.</h2>
           <p className="max-w-md text-muted-foreground">
-            This is a development preview. No data left your browser. The coffee or food e-card is a demo concept and nothing is issued. To review your real policies,
+            This is a development preview. No data left your browser. The $10 coffee or food e-gift card is a demo concept and nothing is issued or sent. To review your real policies,
             connect them through Canopy Connect.
           </p>
           <Button asChild className="font-semibold">
