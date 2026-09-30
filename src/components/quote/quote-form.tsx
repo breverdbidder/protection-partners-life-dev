@@ -61,7 +61,7 @@ export default function QuoteForm() {
           <h2 className="text-2xl font-bold text-navy">Demo completed. Nothing was sent.</h2>
           <p className="max-w-md text-muted-foreground">
             This is a development preview. No data left your browser. The coffee or food e-card is a demo concept and nothing is issued. To review your real policies,
-            connect them securely through Canopy Connect.
+            connect them through Canopy Connect.
           </p>
           <Button asChild className="font-semibold">
             <a href={CANOPY_URL} target="_blank" rel="noopener noreferrer">
