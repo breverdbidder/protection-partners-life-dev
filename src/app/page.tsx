@@ -50,7 +50,11 @@ export default function HomePage() {
                 <a href={CANOPY_URL} target="_blank" rel="noopener noreferrer">Connect your policies <ExternalLink className="size-4" aria-hidden /></a>
               </Button>
             </div>
-            <TrustBadges className="mt-8 justify-center" />
+            <p className="mt-6 text-sm text-muted-foreground">
+              Call <a className="font-semibold text-navy underline" href={`tel:${siteConfig.phone.tel}`}>{siteConfig.phone.display}</a>
+              {" "}or text <a className="font-semibold text-navy underline" href={`sms:${siteConfig.text.sms}`}>{siteConfig.text.display}</a>
+            </p>
+            <TrustBadges className="mt-4 justify-center" />
           </div>
         </div>
       </section>
