@@ -25,16 +25,8 @@ export const businessEntity = {
   name: siteConfig.name,
   legalName: siteConfig.legalName,
   url: BASE_URL,
-  telephone: siteConfig.phone.display,
-  email: siteConfig.email,
   description: siteConfig.description,
   areaServed: { "@type": "Country", name: "United States" },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: siteConfig.address.locality,
-    addressRegion: siteConfig.address.region,
-    addressCountry: siteConfig.address.country,
-  },
 };
 
 export const websiteEntity = {
