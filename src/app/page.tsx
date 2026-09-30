@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ClipboardCheck, Lock, SearchCheck, ExternalLink, Gift } from "lucide-react";
+import { ArrowRight, ClipboardCheck, Coffee, Lock, SearchCheck, ExternalLink, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -32,12 +32,15 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl text-center">
             <img src={`${ASSET_PREFIX}/logo.png`} alt={siteConfig.name} className="mx-auto mb-6 h-24 w-auto" />
             <Badge variant="secondary" className="mb-4">Home · Auto · Business</Badge>
+            <p className="mx-auto mb-4 w-fit rounded-full bg-navy px-5 py-2 text-sm font-bold text-white sm:text-base">
+              Our goal: $1,000,000 in combined premium savings
+            </p>
             <h1 className="text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
               Smarter protection for your home, car and business
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              Review the coverage you have today, find the gaps, and know your next step before
-              your policy renews.
+              Review the coverage you have today while you enjoy a coffee or a bite. Our aim is to
+              have your quote ready before your break ends.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" className="w-full font-semibold sm:w-auto">
@@ -98,16 +101,32 @@ export default function HomePage() {
       </section>
 
       <section className="border-t bg-secondary/50">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 py-14 text-center">
-          <Gift className="size-10 text-primary" aria-hidden />
-          <h2 className="text-2xl font-bold text-navy">Our $1 million coverage-review goal</h2>
-          <p className="max-w-2xl text-muted-foreground">
-            We are working toward helping customers find $1 million in savings and better coverage. That is a
-            goal, not a result and not a guarantee for any one customer.
-          </p>
-          <p className="max-w-2xl rounded-md bg-background p-3 text-sm text-muted-foreground">
-            Thank-you e-card: demo only. No gift card provider, amount, eligibility or funding is set, and nothing is issued from this preview.
-          </p>
+        <div className="mx-auto grid max-w-5xl gap-6 px-4 py-14 md:grid-cols-2">
+          <Card className="border-2 border-navy">
+            <CardContent className="flex flex-col gap-3 pt-6 text-center">
+              <p className="text-sm font-semibold uppercase tracking-wide text-primary">Our mission</p>
+              <p className="text-5xl font-extrabold text-navy">$1,000,000</p>
+              <h2 className="text-xl font-bold text-navy">in combined premium savings</h2>
+              <p className="text-sm text-muted-foreground">
+                This is our goal for the customers we help, not a result we have reached and not a
+                promise about your own premium. Savings depend on your coverage and what is available to you.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="border-2 border-primary-bright">
+            <CardContent className="flex flex-col gap-3 pt-6 text-center">
+              <Coffee className="mx-auto size-10 text-primary" aria-hidden />
+              <h2 className="text-xl font-bold text-navy">A coffee or food e-card while we work on your quote</h2>
+              <p className="text-sm text-muted-foreground">
+                The idea: take a coffee or food break while we review your coverage, with the aim of
+                having your quote back before the break ends.
+              </p>
+              <p className="rounded-md bg-background p-3 text-xs text-muted-foreground">
+                Concept preview only. The e-card is a demo: no provider, amount, eligibility or funding is set,
+                nothing is issued, and there is no guaranteed turnaround time.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </>
