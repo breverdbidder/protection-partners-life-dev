@@ -4,6 +4,8 @@
 
 export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.example.com";
 
+export const ASSET_PREFIX = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const CANOPY_URL = "https://app.usecanopy.com/c/protection-partners";
 
 export const siteConfig = {
