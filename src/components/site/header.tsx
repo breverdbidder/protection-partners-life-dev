@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, ASSET_PREFIX } from "@/lib/site-config";
 
 const navLinks = [
   { href: "/#products", label: "Coverage Options" },
@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="" className="h-9 w-auto" />
+          <img src={`${ASSET_PREFIX}/logo.png`} alt="" className="h-9 w-auto" />
           <span className="text-lg font-bold tracking-tight text-navy">
             {siteConfig.name}
           </span>
