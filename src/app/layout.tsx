@@ -14,7 +14,7 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: `${siteConfig.name} | Compare Life Insurance Quotes`,
+    default: `${siteConfig.name} | Home, Auto and Business Coverage Review`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -34,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(pageSchema({ type: "layout" })) }}
         />
+        <div className="bg-secondary px-4 py-2 text-center text-xs font-semibold text-navy">DEVELOPMENT PREVIEW · SAMPLE DATA ONLY · NOTHING IS SENT</div>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
