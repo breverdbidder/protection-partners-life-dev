@@ -4,7 +4,7 @@ import { siteConfig, CANOPY_URL, ASSET_PREFIX } from "@/lib/site-config";
 export default function Footer() {
   return (
     <footer className="border-t bg-navy text-slate-200">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2">
         <div>
           <img src={`${ASSET_PREFIX}/logo.png`} alt={siteConfig.name} className="h-14 w-auto rounded bg-white p-1" />
           <p className="mt-3 text-sm text-slate-300">{siteConfig.tagline}</p>
@@ -20,14 +20,6 @@ export default function Footer() {
             <li><a href={CANOPY_URL} className="text-slate-300 hover:text-white" target="_blank" rel="noopener noreferrer">Connect your policies</a></li>
           </ul>
         </nav>
-        <div>
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-white">Preview notice</h2>
-          <p className="mt-3 text-xs leading-relaxed text-slate-300">
-            This is a development preview built from an open-source template. License details, contact
-            information and carrier relationships are not yet published. Nothing on this page is an
-            offer of coverage.
-          </p>
-        </div>
       </div>
     </footer>
   );
