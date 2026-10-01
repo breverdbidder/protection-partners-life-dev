@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(pageSchema({ type: "layout" })) }}
         />
-        <div className="bg-secondary px-4 py-2 text-center text-xs font-semibold text-navy">DEVELOPMENT PREVIEW · SAMPLE DATA ONLY · NOTHING IS SENT</div>
+        <div className="bg-secondary px-4 py-2 text-center text-xs font-semibold text-navy">DEVELOPMENT PREVIEW · WALKTHROUGH USES SAMPLE DATA ONLY</div>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
