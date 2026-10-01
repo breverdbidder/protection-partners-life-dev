@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, MessageSquare, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig, ASSET_PREFIX } from "@/lib/site-config";
 
@@ -60,6 +60,13 @@ export default function Header() {
           >
             <Phone className="size-4" aria-hidden />
           </a>
+          <a
+            href={`sms:${siteConfig.text.sms}`}
+            className="inline-flex size-9 items-center justify-center rounded-md border text-primary sm:hidden"
+            aria-label={`Text ${siteConfig.text.display}`}
+          >
+            <MessageSquare className="size-4" aria-hidden />
+          </a>
           <button
             type="button"
             className="inline-flex size-9 items-center justify-center rounded-md border md:hidden"
@@ -69,6 +76,19 @@ export default function Header() {
           >
             {open ? <X className="size-4" aria-hidden /> : <Menu className="size-4" aria-hidden />}
           </button>
+        </div>
+      </div>
+
+      <div className="border-t bg-muted/40 px-4 py-2 xl:hidden">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-2">
+          <a href={`tel:${siteConfig.phone.tel}`} className="flex flex-col items-center rounded-md border bg-background px-2 py-1.5 text-center text-navy">
+            <span className="text-[11px] font-medium text-muted-foreground">Call</span>
+            <span className="text-sm font-semibold whitespace-nowrap">{siteConfig.phone.display}</span>
+          </a>
+          <a href={`sms:${siteConfig.text.sms}`} className="flex flex-col items-center rounded-md border bg-background px-2 py-1.5 text-center text-navy">
+            <span className="text-[11px] font-medium text-muted-foreground">Text</span>
+            <span className="text-sm font-semibold whitespace-nowrap">{siteConfig.text.display}</span>
+          </a>
         </div>
       </div>
 
