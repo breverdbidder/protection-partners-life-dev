@@ -57,7 +57,8 @@ export default function HomePage() {
                 <a href={CANOPY_URL} target="_blank" rel="noopener noreferrer">Connect your policies <ExternalLink className="size-4" aria-hidden /></a>
               </Button>
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
+            <p className="mt-3 text-xs text-muted-foreground">"Connect your policies" opens our Canopy Connect page in a new tab. Information you enter there is submitted to Canopy for real.</p>
+            <p className="mt-4 text-sm text-muted-foreground">
               Call <a className="font-semibold text-navy underline" href={`tel:${siteConfig.phone.tel}`}>{siteConfig.phone.display}</a>
               {" "}or text <a className="font-semibold text-navy underline" href={`sms:${siteConfig.text.sms}`}>{siteConfig.text.display}</a>
             </p>
